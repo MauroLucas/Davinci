@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Nivel 1</name>
+    <events>
+        <event-block sid="874069243890163">
+            <conditions>
+                <condition id="2" name="Key is down" sid="343360014256556" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="921119335297888" type="Mario">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="633405351745023">
+            <conditions>
+                <condition id="2" name="Key is down" sid="655889061838872" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="728040770466161" type="Mario">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="684867528680711">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="597595069902491" type="Mario" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="376160259928733" type="Mario">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="821646464534966">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="482299536522314" type="Goomba">
+                    <param id="0" name="Instance variable">direccion</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="698791078188276" type="Goomba">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="112573816041125">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="860424192038215" type="Goomba">
+                    <param id="0" name="Instance variable">direccion</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="605877244535360" type="Goomba">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="940910795012313">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="360249859051239" type="Goomba">
+                    <param id="0" name="Object">activadorColision</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="461010987940015" type="Goomba">
+                    <param id="0" name="Instance variable">direccion</param>
+                    <param id="1" name="Value"> Goomba.direccion *-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="206189113408538">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="765149745578154" type="Goomba">
+                    <param id="0" name="Object">activadorSalto</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="962277301152550" type="Goomba">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="897934671299567">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="649703550089661" type="Mario">
+                    <param id="0" name="Object">Goomba</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="977144726327650">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="747670468346159" type="Mario" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="550881610074117" type="Mario">
+                            <param id="0" name="Vector Y">-350</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="175905522454036" type="Goomba">
+                            <param id="0" name="Object">d97lofa5445e62e8a1b42f6b48fc6fd7252ce</param>
+                            <param id="1" name="Layer">9</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="380243122200017" type="Mario">
+                            <param id="0" name="Magnitude">40</param>
+                            <param id="1" name="Duration">1</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="931861832477582" type="Goomba">
+                            <param id="0" name="Height">18</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="326374788459320" type="Goomba">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="495478247532106" type="Goomba">
+                            <param id="0" name="Vector Y">-200</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="533803356058022" type="Goomba">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="531695658982063" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="716110457411639" type="Goomba" />
+                    </actions>
+                </event-block>
+                <event-block sid="909437681497925">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="487047629341148" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="268715501240277" type="Mario" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

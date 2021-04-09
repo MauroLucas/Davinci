@@ -1,0 +1,9 @@
+﻿License type: BUSINESS
+Product: Construct 2
+Licensed to: ASas
+Email: ASas
+Comment: With best wishes from Figgler [mrfiggler@gmail.com]
+Timestamp: 1617821358
+Hash: F624E4DE318372E62B22C5ED8C0C7B63F8F06EBF9FFC25E
+
+This is PRIVATE license. Please TURN OFF "UPDATE CHECKING" in C2 preferences BEFORE USE!!!
